@@ -17,11 +17,55 @@ def ficha():
     #   - Cantidad de caracteres del nombre
     #   - Iniciales: usar find para encontrar el espacio e indexar las letras
     #   - Usuario: apellido.nombre en minúsculas
-    #   - Verificar si el email contiene @ 
+    #   - Verificar si el email contiene @
     #   - Extraer el dominio del email
     #   - Nombre con guion bajo en vez de espacio
     #   - Contar las 'a' en el nombre
     #   - Código secreto: nombre invertido en mayúsculas
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
-    pass
+
+
+    nombre=input("Nombre Completo del alumno:")
+    mail=input("Mail institucional del alumno:")
+    nota_1=int(input("Nota 1: "))
+    nota_2= int(input("Nota 2: "))
+    nota_3= int(input("Nota 3: "))
+
+    nombre_correcto=nombre.strip().lower()
+
+    mail_correcto=mail.strip()
+
+    espacios=int(nombre_correcto.find(" "))
+    letra_apellido=espacios+1
+
+
+
+    nombre_archivo=nombre_correcto.replace(" ","_")
+    codigo_secreto=nombre_correcto[::-1]
+
+
+    promedio=(nota_1 + nota_2 + nota_3)/3
+
+    espacios_mail = int(mail_correcto.find("@"))
+    arroba_posicion=espacios_mail+1
+
+    print(f"""==========================\n     FICHA DE ALUMNO   \n==========================""")
+    print(f"Nombre: {nombre_correcto.title()}")
+    print(f"Email: {mail_correcto.lower()}")
+    print(f"Caracteres en nombre: {len(nombre_correcto)}")
+    print(f"Iniciales: {nombre_correcto[0].upper()}{nombre_correcto[letra_apellido].upper()}")
+    print(f"Usuario:{nombre_correcto[espacios:].lower()}.{nombre_correcto[0:espacios].lower()}")
+    print(f"Email valido: {"@"in mail_correcto}")
+    print(f"Dominio: {mail_correcto[arroba_posicion:].lower()}")
+    print(f"Nombre para archivo: {nombre_archivo.title()}")
+    print(f"Cantidad de a: {nombre_correcto.count("a")}")
+    print(f"Codigo secreto: {codigo_secreto.upper()}")
+    print(f"Nota 1: {nota_1}")
+    print(f"Nota 2: {nota_2}")
+    print(f"Nota 3: {nota_3}")
+    print(f"Suma: {nota_1+nota_2+nota_3}")
+    print(f"Promedio: {promedio}")
+    print(f"Promedio entero: {int(promedio)}")
+
+    print("="*24)
