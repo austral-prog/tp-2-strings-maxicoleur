@@ -3,3 +3,9 @@ def slice_advanced():
     en adelante, tomando uno de cada dos (paso 2).
     """
     pass
+
+    texto=input("Ingrese el texto deseado: ")
+
+    texto_partido=(texto[4::2])
+
+    print(texto_partido)
