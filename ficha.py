@@ -50,7 +50,7 @@ def ficha():
     espacios_mail = int(mail_correcto.find("@"))
     arroba_posicion=espacios_mail+1
 
-    print(f"""==========================\n     FICHA DE ALUMNO   \n==========================""")
+    print(f"""========================\n    FICHA DEL ALUMNO\n========================""")
     print(f"Nombre: {nombre_correcto.title()}")
     print(f"Email: {mail_correcto.lower()}")
     print(f"Caracteres en nombre: {len(nombre_correcto)}")
@@ -59,7 +59,7 @@ def ficha():
     print(f"Email valido: {'@'in mail_correcto}")
     print(f"Dominio: {mail_correcto[arroba_posicion:].lower()}")
     print(f"Nombre para archivo: {nombre_archivo.title()}")
-    print(f"Cantidad de a: {nombre_correcto.count('a')}")
+    print(f"Cantidad de a: {nombre_correcto.count("a")}")
     print(f"Codigo secreto: {codigo_secreto.upper()}")
     print(f"Nota 1: {nota_1}")
     print(f"Nota 2: {nota_2}")
@@ -69,3 +69,6 @@ def ficha():
     print(f"Promedio entero: {int(promedio)}")
 
     print("="*24)
+
+
+
