@@ -9,3 +9,4 @@ def slice_simple():
     print(awe.lower())
     print(texto[2:5])
     print(texto.lower())
+
