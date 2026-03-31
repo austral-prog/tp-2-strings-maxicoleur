@@ -4,9 +4,10 @@ def names():
     """
     pass
 
-    name=input("Ingrese su nombre y apellido: ")
-
-    print(name.lower())
-    print(name.title())
-    print("\t"+name.upper())
+    name=input("Ingrese su nombre:")
+    surname=input("Ingrese su apellido:")
+    print(f"{name.lower()} {surname.lower()}")
+    print(f"{name.title()} {surname.title()}")
+    print(f"{name.upper()} {surname.upper()}")
+    print("\t"+f"{name.lower()} {surname.lower()}")
 
