@@ -59,7 +59,7 @@ def ficha():
     print(f"Email valido: {'@'in mail_correcto}")
     print(f"Dominio: {mail_correcto[arroba_posicion:].lower()}")
     print(f"Nombre para archivo: {nombre_archivo.title()}")
-    print(f"Cantidad de a: {nombre_correcto.count("a")}")
+    print(f"Cantidad de a: {nombre_correcto.count('a')}")
     print(f"Codigo secreto: {codigo_secreto.upper()}")
     print(f"Nota 1: {nota_1}")
     print(f"Nota 2: {nota_2}")
